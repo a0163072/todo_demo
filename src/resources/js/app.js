@@ -16,14 +16,15 @@ require('./bootstrap');
  import { BrowserRouter, Route ,Routes} from "react-router-dom";
  import Example from "./pages/Example";
 import Home from './pages/Home';
-
+import PostEdit from './pages/PostEdit'; //追記
 const App = () => {
 
     return(
         <BrowserRouter>
             <Routes>
                 <Route path="/example" element={<Example/>}/>
-                <Route path="/home" element={<Home/>}/>
+                <Route path="/" element={<Home/>}/>
+                <Route path="/post/edit/:id" element={<PostEdit/>}/>
             </Routes>
         </BrowserRouter>
     );
